@@ -1,0 +1,23 @@
+# --- Secrets (NEVER COMMIT) ---
+api/config.php
+.env
+.env.*
+
+# --- OS / Editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Logs / temp ---
+*.log
+tmp/
+cache/
+
+# --- Dependencies (if any later) ---
+vendor/
+node_modules/
+
+# --- Build output (if any later) ---
+dist/
+build/
