@@ -1,0 +1,25 @@
+# ===== Environment / Secrets =====
+.env
+.env.*
+config.php
+api/config.php
+
+# ===== Vendor / Dependencies =====
+vendor/
+node_modules/
+
+# ===== Logs =====
+*.log
+logs/
+
+# ===== OS Files =====
+.DS_Store
+Thumbs.db
+
+# ===== IDE =====
+.vscode/
+.idea/
+
+# ===== Cache / Temp =====
+cache/
+tmp/

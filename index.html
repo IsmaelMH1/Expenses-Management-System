@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Monthly Expenses</title>
+</head>
+<body>
+  <h1>Monthly Expenses</h1>
+
+  <label>Month (YYYY-MM): <input id="month" value="2025-12"></label><br><br>
+  <label>Starting money: <input id="money" type="number" value="900"></label><br><br>
+  <button id="save">Save Month Start</button>
+
+  <pre id="out"></pre>
+
+  <script>
+    document.getElementById("save").addEventListener("click", async () => {
+      const month_key = document.getElementById("month").value;
+      const starting_money = Number(document.getElementById("money").value);
+
+      const res = await fetch("../api/month_start.php", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ month_key, starting_money })
+      });
+
+      const data = await res.json();
+      document.getElementById("out").textContent = JSON.stringify(data, null, 2);
+    });
+  </script>
+</body>
+</html>
